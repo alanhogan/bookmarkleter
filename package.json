@@ -9,7 +9,9 @@
   "scripts": {
     "build": "browserify browser-tool.js | minify > build/browser-tool.js",
     "coverage": "istanbul cover nodeunit test",
-    "test": "npm run coverage"
+    "test": "npm run coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,8 @@
   },
   "dependencies": {
     "babel-minify": "^0.5.0",
-    "babel-standalone": "^6.17.0"
-  }
+    "babel-standalone": "^6.17.0",
+    "snyk": "^1.192.3"
+  },
+  "snyk": true
 }
